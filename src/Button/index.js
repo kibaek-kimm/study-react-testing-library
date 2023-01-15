@@ -5,7 +5,7 @@ export default function Button() {
   const [variant, setVariant] = useState("red");
 
   const handleClick = () => {
-    setVariant("red" ? "blue" : "red");
+    setVariant(variant === "red" ? "blue" : "red");
   };
 
   return (
