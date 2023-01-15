@@ -10,10 +10,12 @@ function App() {
       <Button disabled={checked} />
       <input
         readOnly
+        id="disabled-button"
         type="checkbox"
         checked={checked}
         onClick={(e) => setChecked(e.target.checked)}
       />
+      <label htmlFor="disabled-button">Disable button</label>
     </div>
   );
 }
