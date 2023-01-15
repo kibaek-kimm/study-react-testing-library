@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { getButtonText, getButtonStyle } from "./helper";
 
-export default function Button() {
+export default function Button(props) {
   const [variant, setVariant] = useState("red");
 
   const handleClick = () => {
@@ -9,7 +9,7 @@ export default function Button() {
   };
 
   return (
-    <button onClick={handleClick} style={getButtonStyle(variant)}>
+    <button onClick={handleClick} style={getButtonStyle(variant)} {...props}>
       {getButtonText(variant)}
     </button>
   );
