@@ -1,9 +1,10 @@
 import "./App.css";
+import Button from "./Button";
 
 function App() {
   return (
     <div>
-      <button style={{ backgroundColor: "red" }}>Change to blue</button>
+      <Button />
     </div>
   );
 }
