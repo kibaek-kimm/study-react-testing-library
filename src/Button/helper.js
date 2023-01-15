@@ -6,7 +6,13 @@ export function getButtonText(type) {
   return "Change to red";
 }
 
-export function getButtonStyle(type) {
+export function getButtonStyle(type, disabled) {
+  if (disabled) {
+    return {
+      backgroundColor: "gray",
+    };
+  }
+
   if (type === "red") {
     return {
       backgroundColor: "red",
