@@ -2,10 +2,12 @@ import { useState } from "react";
 import { getButtonText, getButtonStyle } from "./helper";
 
 export default function Button({ disabled, ...props }) {
-  const [variant, setVariant] = useState("red");
+  const [variant, setVariant] = useState("MediumVioletRed");
 
   const handleClick = () => {
-    setVariant(variant === "red" ? "blue" : "red");
+    setVariant(
+      variant === "MediumVioletRed" ? "MidnightBlue" : "MediumVioletRed"
+    );
   };
 
   return (

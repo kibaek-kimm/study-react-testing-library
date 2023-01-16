@@ -1,9 +1,11 @@
+import { replaceCamelWithSpace } from "../App";
+
 export function getButtonText(type) {
-  if (type === "red") {
-    return "Change to blue";
+  if (type === "MidnightBlue") {
+    return `Change to ${replaceCamelWithSpace("MediumVioletRed")}`;
   }
 
-  return "Change to red";
+  return `Change to ${replaceCamelWithSpace("MidnightBlue")}`;
 }
 
 export function getButtonStyle(type, disabled) {
@@ -13,13 +15,13 @@ export function getButtonStyle(type, disabled) {
     };
   }
 
-  if (type === "red") {
+  if (type === "MediumVioletRed") {
     return {
-      backgroundColor: "red",
+      backgroundColor: "MediumVioletRed",
     };
   }
 
   return {
-    backgroundColor: "blue",
+    backgroundColor: "MidnightBlue",
   };
 }
