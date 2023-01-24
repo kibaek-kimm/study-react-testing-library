@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Button from "../Button";
+import Button from "../../components/Button";
 
 export function replaceCamelWithSpace(colorName) {
   return colorName.replace(/\B([A-Z])\B/g, " $1");
