@@ -1,8 +1,8 @@
 import { render, screen, fireEvent } from "@testing-library/react";
-import App, { replaceCamelWithSpace } from "./App";
+import ButtonTestPage, { replaceCamelWithSpace } from ".";
 
 test("button has correct initial color, and updates when clicked", () => {
-  render(<App />);
+  render(<ButtonTestPage />);
 
   // find an element with a role of button and test of "Change of blue"
   const colorButton = screen.getByRole("button", {
@@ -23,7 +23,7 @@ test("button has correct initial color, and updates when clicked", () => {
 });
 
 test("initial condition", () => {
-  render(<App />);
+  render(<ButtonTestPage />);
   const colorButton = screen.getByRole("button", {
     name: "Change to Midnight Blue",
   });
@@ -34,7 +34,7 @@ test("initial condition", () => {
 });
 
 test("button should be disabled when checkbox is checked", () => {
-  render(<App />);
+  render(<ButtonTestPage />);
   const colorButton = screen.getByRole("button", {
     name: "Change to Midnight Blue",
   });
@@ -47,7 +47,7 @@ test("button should be disabled when checkbox is checked", () => {
 });
 
 test("button should be disabled and enabled when checkbox clicked twice", () => {
-  render(<App />);
+  render(<ButtonTestPage />);
   const colorButton = screen.getByRole("button", {
     name: "Change to Midnight Blue",
   });
@@ -65,7 +65,7 @@ test("button should be disabled and enabled when checkbox clicked twice", () => 
 });
 
 test("button disabled to gray", () => {
-  render(<App />);
+  render(<ButtonTestPage />);
   const colorButton = screen.getByRole("button", {
     name: "Change to Midnight Blue",
   });
