@@ -7,7 +7,7 @@ test("update scoop subtotal when scoop change", async () => {
   render(<Options optionType="scoops" />);
 
   // make sure total starts out at $0.00
-  const scoopsSubtotal = screen.getByText("Scoop total: $", {
+  const scoopsSubtotal = screen.getByText("Scoops total: $", {
     exact: false,
   });
   expect(scoopsSubtotal).toHaveTextContent("0.00");
