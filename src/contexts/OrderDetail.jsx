@@ -48,6 +48,7 @@ export function OrderDetailsProvider(props) {
     // multiply the total number of items by the price for this item type
     return totalCount * pricePerItem[optionType];
   }
+
   const totals = {
     scoops: calculateTotal("scoops"),
     toppings: calculateTotal("toppings"),
