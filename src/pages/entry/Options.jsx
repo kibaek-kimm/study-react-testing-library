@@ -14,12 +14,21 @@ export default function Options({ optionType }) {
   const { totals } = useOrderDetails();
 
   useEffect(() => {
+    // create an abortContoller attach to netweok request
+    const controller = new AbortController();
     axios
-      .get(`http://localhost:3030/${optionType}`)
+      .get(`http://localhost:3030/${optionType}`, { signal: controller.signal })
       .then((response) => {
         setItems(response.data);
       })
-      .catch((err) => setError(true));
+      .catch((err) => {
+        if (err.name !== "CanceledError") {
+          setError(true);
+        }
+      });
+
+    // abort axios call on component unmount
+    return () => controller.abort();
   }, [optionType]);
 
   if (error) {
