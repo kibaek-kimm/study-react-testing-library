@@ -1,4 +1,4 @@
-import { replaceCamelWithSpace } from "../App";
+import { replaceCamelWithSpace } from "../../pages/button-test";
 
 export function getButtonText(type) {
   if (type === "MidnightBlue") {
